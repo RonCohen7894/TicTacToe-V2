@@ -16,6 +16,7 @@ namespace TicTacToe_2
 
         string player;
         bool turn = true;
+        bool win;
         #endregion
 
         public Form1()
@@ -133,12 +134,55 @@ namespace TicTacToe_2
 
         private void Check_for_win()
         {
-            if (button1.Text.Equals(button2.Text.Equals(button3.Text)))
-            {
-                MessageBox.Show("Tocha");
-            }
+            #region var
+            string btn1 = button1.Text;
+            string btn2 = button2.Text;
+            string btn3 = button3.Text;
+            string btn4 = button4.Text;
+            string btn5 = button5.Text;
+            string btn6 = button6.Text;
+            string btn7 = button7.Text;
+            string btn8 = button8.Text;
+            string btn9 = button9.Text;
+            #endregion
+
+            #region if
+            if (btn1 == btn2 && btn3 == btn2)     
+                after_win();          
+
+            else if (btn4 == btn5 && btn6 == btn5)            
+                after_win();
+
+            else if (btn7 == btn8 && btn9 == btn8)            
+                after_win();
+            
+            else if (btn1 == btn4 && btn7 == btn4) 
+                after_win();
+            
+            else if (btn2 == btn5 && btn8 == btn5)            
+                after_win();
+
+            else if (btn3 == btn6 && btn9 == btn6)
+                after_win();
+            
+            else if (btn1 == btn5 && btn9 == btn5)
+                after_win();
+
+            else if (btn3 == btn5 && btn7 == btn5)
+                after_win();
+            
+            #endregion
         }
 
+        private void after_win()
+        {
+            int wins = 0;
+            if (turn = true)
+            {
+                wins += 1;
+                C_win.Text = wins.ToString();
+            }
+        }
         #endregion
     }
 }

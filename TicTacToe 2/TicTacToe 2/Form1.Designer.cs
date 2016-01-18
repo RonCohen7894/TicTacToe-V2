@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Pgame = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.C_win = new System.Windows.Forms.Label();
+            this.L_win = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -45,6 +51,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.Pmenu = new System.Windows.Forms.Panel();
             this.Change_Color = new System.Windows.Forms.CheckBox();
+            this.AutoPlay = new System.Windows.Forms.CheckBox();
             this.Default_Color = new System.Windows.Forms.CheckBox();
             this.B_Play = new System.Windows.Forms.PictureBox();
             this.Choose_O = new System.Windows.Forms.Button();
@@ -53,7 +60,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lable = new System.Windows.Forms.Label();
-            this.AutoPlay = new System.Windows.Forms.CheckBox();
             this.Pgame.SuspendLayout();
             this.Pmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.B_Play)).BeginInit();
@@ -61,6 +67,12 @@
             // 
             // Pgame
             // 
+            this.Pgame.Controls.Add(this.label6);
+            this.Pgame.Controls.Add(this.label5);
+            this.Pgame.Controls.Add(this.label9);
+            this.Pgame.Controls.Add(this.label8);
+            this.Pgame.Controls.Add(this.C_win);
+            this.Pgame.Controls.Add(this.L_win);
             this.Pgame.Controls.Add(this.panel4);
             this.Pgame.Controls.Add(this.panel3);
             this.Pgame.Controls.Add(this.panel2);
@@ -79,6 +91,66 @@
             this.Pgame.Name = "Pgame";
             this.Pgame.Size = new System.Drawing.Size(529, 481);
             this.Pgame.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(164, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 36);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Losses:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(329, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 36);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Ties:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(401, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 36);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(254, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 36);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "0";
+            // 
+            // C_win
+            // 
+            this.C_win.AutoSize = true;
+            this.C_win.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_win.Location = new System.Drawing.Point(85, 20);
+            this.C_win.Name = "C_win";
+            this.C_win.Size = new System.Drawing.Size(30, 36);
+            this.C_win.TabIndex = 15;
+            this.C_win.Text = "0";
+            // 
+            // L_win
+            // 
+            this.L_win.AutoSize = true;
+            this.L_win.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_win.Location = new System.Drawing.Point(12, 20);
+            this.L_win.Name = "L_win";
+            this.L_win.Size = new System.Drawing.Size(71, 36);
+            this.L_win.TabIndex = 15;
+            this.L_win.Text = "Wins:";
             // 
             // panel4
             // 
@@ -119,6 +191,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(93, 84);
             this.button9.TabIndex = 2;
+            this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -129,16 +202,18 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 84);
             this.button6.TabIndex = 3;
+            this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.btn_Click);
             // 
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(93, 334);
+            this.button8.Location = new System.Drawing.Point(214, 334);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(93, 84);
             this.button8.TabIndex = 4;
+            this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -149,16 +224,18 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(93, 84);
             this.button3.TabIndex = 5;
+            this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.btn_Click);
             // 
             // button7
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(214, 334);
+            this.button7.Location = new System.Drawing.Point(91, 334);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(93, 84);
             this.button7.TabIndex = 6;
+            this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -169,6 +246,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(93, 84);
             this.button5.TabIndex = 7;
+            this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -179,6 +257,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 84);
             this.button1.TabIndex = 8;
+            this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -189,6 +268,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(93, 84);
             this.button2.TabIndex = 9;
+            this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -199,6 +279,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 84);
             this.button4.TabIndex = 10;
+            this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.btn_Click);
             // 
@@ -231,6 +312,17 @@
             this.Change_Color.Text = "Change Color";
             this.Change_Color.UseVisualStyleBackColor = true;
             this.Change_Color.CheckedChanged += new System.EventHandler(this.Change_Color_CheckedChanged);
+            // 
+            // AutoPlay
+            // 
+            this.AutoPlay.AutoSize = true;
+            this.AutoPlay.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AutoPlay.Location = new System.Drawing.Point(47, 268);
+            this.AutoPlay.Name = "AutoPlay";
+            this.AutoPlay.Size = new System.Drawing.Size(253, 32);
+            this.AutoPlay.TabIndex = 11;
+            this.AutoPlay.Text = "Play Against The Computer";
+            this.AutoPlay.UseVisualStyleBackColor = true;
             // 
             // Default_Color
             // 
@@ -322,17 +414,6 @@
             this.lable.TabIndex = 0;
             this.lable.Text = "Menu";
             // 
-            // AutoPlay
-            // 
-            this.AutoPlay.AutoSize = true;
-            this.AutoPlay.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AutoPlay.Location = new System.Drawing.Point(47, 268);
-            this.AutoPlay.Name = "AutoPlay";
-            this.AutoPlay.Size = new System.Drawing.Size(253, 32);
-            this.AutoPlay.TabIndex = 11;
-            this.AutoPlay.Text = "Play Against The Computer";
-            this.AutoPlay.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +426,7 @@
             this.Name = "Form1";
             this.Text = "TicTacToe 2";
             this.Pgame.ResumeLayout(false);
+            this.Pgame.PerformLayout();
             this.Pmenu.ResumeLayout(false);
             this.Pmenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.B_Play)).EndInit();
@@ -379,6 +461,12 @@
         private System.Windows.Forms.CheckBox Default_Color;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox AutoPlay;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label C_win;
+        private System.Windows.Forms.Label L_win;
     }
 }
 
